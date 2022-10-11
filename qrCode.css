@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #49f;
+}
+
+.qrGenerator {
+    height: 250px;
+    background: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: height 0.5s ease;
+}
+
+.qrGenerator.active {
+    height: 500px;
+}
+
+header h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+header p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.qrInputs :where(input, button) {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+}
+
+.qrInputs input {
+    text-align: center;
+    font-size: 15px;
+}
+
+.qrInputs button {
+    background: #49f;
+    color: white;
+    font-size: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.qrImage  {
+    padding: 60px 0;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.qrGenerator.active .qrImage {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s 0.5s ease;
+}
